@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Click the button to see my feelings for you</h1>
+      <h2>😊😊😊</h2>
+      <div id="heartContainer" class="hidden">
+        <img src="img/fuck.png" alt="Angry Image" />
+        <div class="heart"></div>
+        <p>FUCK YOU!!!</p>
+      </div>
+      <button id="revealButton">Reveal</button>
+    </div>
+  </body>
+  <script>
+    const button = document.getElementById("revealButton");
+    const heartContainer = document.getElementById("heartContainer");
+
+    button.addEventListener("click", function () {
+      // Toggle visibility of the heartContainer
+      heartContainer.classList.toggle("hidden");
+
+      // Change button text depending on the visibility state
+      if (heartContainer.classList.contains("hidden")) {
+        button.textContent = "Reveal";
+      } else {
+        button.textContent = "Back";
+      }
+    });
+  </script>
+</html>
